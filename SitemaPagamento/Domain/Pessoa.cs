@@ -8,10 +8,10 @@ namespace SitemaPagamento.Domain
 {
     public class Pessoa
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string CPF { get; set; }
-        public string Phone { get; set; }
+        protected string Name { get; set; }
+        protected string Email { get; set; }
+        protected string CPF { get; set; }
+        protected string Phone { get; set; }
 
     }
 }

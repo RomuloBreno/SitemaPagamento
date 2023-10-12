@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,21 +48,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Categorias.cs" />
-    <Compile Include="Domain\Cliente.cs" />
+    <Compile Include="Controllers\FormControllers.cs" />
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\Client.cs" />
     <Compile Include="dbteste.cs" />
-    <Compile Include="Domain\Eventos.cs" />
+    <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\Pessoa.cs" />
-    <Compile Include="Domain\Usuario.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Forms\CreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Forms\CreateEvent.Designer.cs">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewes\DataView\DataViewEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewes\DataView\DataViewEvent.Designer.cs">
+      <DependentUpon>DataViewEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewes\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewes\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home.resx">
+    <Compile Include="Viewes\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewes\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewes\SistemPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewes\SistemPay.Designer.cs">
+      <DependentUpon>SistemPay.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\CreateEvent.resx">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewes\DataView\DataViewEvent.resx">
+      <DependentUpon>DataViewEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewes\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -72,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Viewes\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewes\SistemPay.resx">
+      <DependentUpon>SistemPay.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="Viewes\Menus\" />
+    <Folder Include="Viewes\ViewesCalendar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

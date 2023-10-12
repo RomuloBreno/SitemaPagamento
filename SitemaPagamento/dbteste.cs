@@ -7,35 +7,46 @@ using SitemaPagamento.Domain;
 
 namespace SitemaPagamento.Domain
 {
-    public class Dbteste
+    public class Dbteste:Pessoa
     {
 
 
-        public Tuple<Usuario, Cliente> DadosDataBase()
+        public Tuple<User, Client, Event> DadosDataBase()
         {
 
-            Usuario user = new Usuario
-            {
-                IdUser = Guid.NewGuid(),
-                Name = "Romulo",
-                Email = "teste@teste.com",
-                CPF = "123.456.789.10",
-                Phone = "11980581033",
-                Job = "trainee",
-            };
+            User userObject = new User(
+                idUser: new Guid(),
+                job: "Analista",
+                name: "Romulo",
+                email: "teste@teste.com",
+                phone: "11980581033", 
+                cpf: "123.456.789.10"
+                );
 
-            Cliente cliente = new Cliente
-            {
-                IdCliente = Guid.NewGuid(),
-                Name = "Marcos",
-                Email = "Teste@teste.com",
-                CPF = "223.456.789.10",
-                Phone = "21980581033",
-            };
+            Client clientObject = new Client(
+                idClient: new Guid(),
+                beens: "10",
+                name: "Romulo",
+                email: "teste@teste.com",
+                phone: "11980581033",
+                cnpj: "456.789.000/0001-13"
+                );
+
+            Event eventObject = new Event(
+                idEvent: new Guid(),
+                name: "teste evento",
+                description: "teste evento",
+                category: new Category(),
+                date: new DateTime(),
+                userOwner: new Guid(),
+                idClientes: new List<Guid>(4),
+                beens: 10
+                );
 
 
 
-            return new Tuple<Usuario, Cliente>(user, cliente);
+
+            return new Tuple<User, Client, Event>(userObject, clientObject, eventObject);
 
             
 

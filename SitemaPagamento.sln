@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitemaPagamento", "SitemaPagamento\SitemaPagamento.csproj", "{3A524B56-7B6C-4737-8703-83AADEB5E59C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSistemaPagamento", "UnitTestSistemaPagamento\UnitTestSistemaPagamento.csproj", "{8DCE9E12-C2E9-4543-9957-E40EFAB494DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3A524B56-7B6C-4737-8703-83AADEB5E59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A524B56-7B6C-4737-8703-83AADEB5E59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A524B56-7B6C-4737-8703-83AADEB5E59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCE9E12-C2E9-4543-9957-E40EFAB494DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCE9E12-C2E9-4543-9957-E40EFAB494DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCE9E12-C2E9-4543-9957-E40EFAB494DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCE9E12-C2E9-4543-9957-E40EFAB494DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

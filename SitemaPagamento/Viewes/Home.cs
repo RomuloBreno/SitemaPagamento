@@ -1,4 +1,5 @@
 ﻿using SitemaPagamento.Domain;
+using SitemaPagamento.Viewes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SitemaPagamento
 {
@@ -15,15 +17,18 @@ namespace SitemaPagamento
     {
         public Home()
         {
+
+            //Login login = new Login();
+            // login.ShowDialog();
+
+
+
             InitializeComponent();
 
             Dbteste db = new Dbteste();
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
+        
     }
 }
